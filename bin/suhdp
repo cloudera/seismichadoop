@@ -1,0 +1,4 @@
+#!/bin/bash
+
+BASEDIR=$(dirname $0)
+$HADOOP_HOME/bin/hadoop jar $BASEDIR/../target/seismic-0.1.0-job.jar $@

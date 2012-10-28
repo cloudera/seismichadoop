@@ -18,15 +18,15 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.util.List;
 
-import com.cloudera.crunch.GroupingOptions;
-import com.cloudera.crunch.MapFn;
-import com.cloudera.crunch.PCollection;
-import com.cloudera.crunch.PGroupedTable;
-import com.cloudera.crunch.Pair;
-import com.cloudera.crunch.TupleN;
-import com.cloudera.crunch.lib.JoinUtils;
-import com.cloudera.crunch.type.PType;
-import com.cloudera.crunch.type.PTypeFamily;
+import org.apache.crunch.GroupingOptions;
+import org.apache.crunch.MapFn;
+import org.apache.crunch.PCollection;
+import org.apache.crunch.PGroupedTable;
+import org.apache.crunch.Pair;
+import org.apache.crunch.TupleN;
+import org.apache.crunch.lib.join.JoinUtils;
+import org.apache.crunch.types.PType;
+import org.apache.crunch.types.PTypeFamily;
 import com.cloudera.seismic.segy.Field;
 import com.cloudera.seismic.segy.Fields;
 

@@ -19,7 +19,7 @@ import java.nio.ByteBuffer;
 
 import org.apache.hadoop.mapreduce.TaskInputOutputContext;
 
-import com.cloudera.crunch.Emitter;
+import org.apache.crunch.Emitter;
 import com.cloudera.seismic.su.SUCallback;
 
 public class EmitterCallback implements SUCallback {

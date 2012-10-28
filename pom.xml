@@ -13,14 +13,14 @@
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-core</artifactId>
-      <version>0.20.2-cdh3u1</version>
+      <version>1.0.3</version>
       <scope>provided</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.cloudera.crunch</groupId>
+      <groupId>org.apache.crunch</groupId>
       <artifactId>crunch</artifactId>
-      <version>0.1.0</version>
+      <version>0.3.0-incubating</version>
     </dependency>
 
     <dependency>
@@ -36,11 +36,6 @@
       <id>maven-hadoop</id>
       <name>Hadoop Releases</name>
       <url>https://repository.cloudera.com/content/repositories/releases/</url>
-    </repository>
-    <repository>
-      <id>cloudera-local</id>
-      <name>Cloudera Snapshots</name>
-      <url>https://repository.cloudera.com/artifactory/libs-release-local/</url>
     </repository>
   </repositories>
 

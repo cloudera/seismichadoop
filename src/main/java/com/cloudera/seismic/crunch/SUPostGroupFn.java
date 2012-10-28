@@ -17,11 +17,10 @@ package com.cloudera.seismic.crunch;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-import com.cloudera.crunch.DoFn;
-import com.cloudera.crunch.Emitter;
-import com.cloudera.crunch.Pair;
-import com.cloudera.crunch.TupleN;
-import com.cloudera.crunch.impl.mr.run.CrunchRuntimeException;
+import org.apache.crunch.DoFn;
+import org.apache.crunch.Emitter;
+import org.apache.crunch.Pair;
+import org.apache.crunch.TupleN;
 import com.cloudera.seismic.su.SUCallback;
 import com.cloudera.seismic.su.SUProcess;
 
@@ -40,7 +39,7 @@ public class SUPostGroupFn extends DoFn<Pair<TupleN, Iterable<ByteBuffer>>, Byte
     try {
       proc.start();
     } catch (IOException e) {
-      throw new CrunchRuntimeException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -56,7 +55,7 @@ public class SUPostGroupFn extends DoFn<Pair<TupleN, Iterable<ByteBuffer>>, Byte
         proc.write(bb.array(), bb.arrayOffset(), bb.limit());
       }
     } catch (IOException e) {
-      throw new CrunchRuntimeException(e);
+      throw new RuntimeException(e);
     }
   }
 
@@ -65,7 +64,7 @@ public class SUPostGroupFn extends DoFn<Pair<TupleN, Iterable<ByteBuffer>>, Byte
     try {
       proc.closeAndWait();
     } catch (IOException e) {
-      throw new CrunchRuntimeException(e);
+      throw new RuntimeException(e);
     }
   }
 }

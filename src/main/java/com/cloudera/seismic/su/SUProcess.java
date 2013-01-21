@@ -61,7 +61,7 @@ public class SUProcess implements SUCallback {
   public void cleanup(TaskInputOutputContext context) throws IOException {
     closeAndWait();
     for (SUCallback callback : callbacks) {
-      cleanup(context);
+      callback.cleanup(context);
     }
   }
   
